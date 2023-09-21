@@ -1,10 +1,12 @@
 ﻿namespace ConAdmin.Domain;
 
-public interface IRepository<T> where T : EntityBase
+public interface IRepository<TEntity> where TEntity : EntityBase
 {
-    T GetBy(object id);
-    IEnumerable<T> GetAll();
-    void Add(T entity);
-    T this[object id] { get; set; }
-    void Remove(T entity);
+    TEntity GetBy(object id);
+    IEnumerable<TEntity> GetAll();
+    IEnumerable<TEntity> FindBy(Func<TEntity, bool> predicate);
+    void Add(TEntity entity);
+    void AddRange(IEnumerable<TEntity> entities);
+    void Remove(TEntity entity);
+    void RemoveRange(IEnumerable<TEntity> entities);
 }
