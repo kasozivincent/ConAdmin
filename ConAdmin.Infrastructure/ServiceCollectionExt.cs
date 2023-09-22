@@ -1,4 +1,6 @@
-﻿using ConAdmin.Domain.Employees;
+﻿using ConAdmin.Domain.Companies;
+using ConAdmin.Domain.Contacts;
+using ConAdmin.Domain.Employees;
 using ConAdmin.Domain.Projects;
 using ConAdmin.Infrastructure.DataAccess;
 using ConAdmin.Infrastructure.DataAccess.Repositories;
@@ -11,6 +13,8 @@ public static class ServiceCollectionExt
     {
         services.AddScoped<IProjectRepository, ProjectRepository>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<ICompanyRepository, CompanyRepository>();
+        services.AddScoped<IContactRepository, ContactRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         return services;
     }
