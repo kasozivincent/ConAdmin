@@ -4,4 +4,5 @@ public interface IProjectRepository : IRepository <Project>
 {
     IEnumerable<Project> FindBy(IEnumerable<MarketSegment> segments, bool completed);
     IEnumerable<MarketSegment> FindAllMarketSegments();
+    void SaveContact(ProjectContact contact);
 }

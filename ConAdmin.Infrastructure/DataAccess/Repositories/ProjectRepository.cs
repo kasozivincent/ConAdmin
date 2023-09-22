@@ -14,4 +14,9 @@ public class ProjectRepository : Repository<Project>, IProjectRepository
     {
         throw new NotImplementedException();
     }
+
+    public void SaveContact(ProjectContact contact)
+    {
+        throw new NotImplementedException();
+    }
 }
