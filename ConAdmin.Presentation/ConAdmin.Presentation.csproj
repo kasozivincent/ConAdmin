@@ -15,4 +15,8 @@
       <ProjectReference Include="..\ConAdmin.Application\ConAdmin.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+    </ItemGroup>
+
 </Project>
