@@ -64,7 +64,7 @@ public class Submittal : EntityBase
         this.remainderLocation = SubmittalRemainderLocation.None;
         this.remainderUnderSubmittalNumber = string.Empty;
         this.otherRemainderLocation = string.Empty;
-        this.Validate();
+        //this.Validate();
     }
     
     public object ProjectKey
